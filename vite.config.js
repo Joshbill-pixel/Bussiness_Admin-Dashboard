@@ -4,7 +4,9 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-});
+  base: '/Bussiness_Admin-Dashboard/',
+})
+
 
 
 // import { defineConfig } from 'vite';
