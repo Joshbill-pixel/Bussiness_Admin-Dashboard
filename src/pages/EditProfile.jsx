@@ -34,7 +34,7 @@ export default function EditProfile() {
     fullName: "Uncle Tee's",
     email: 'UncleTees@gmail.com',
     phone: '2348134729',
-    location: 'Abu',
+    location: '',
     bio:
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis.',
     photoUrl:
@@ -126,8 +126,8 @@ export default function EditProfile() {
                 <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
                 <input
                   type="text"
-                  value={profileData.location}
-                  readOnly
+                  placeholder='Enter Your Location'
+                  // value={profileData.location}
                   className="w-full pl-10 pr-4 py-2 sm:py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
                 />
               </div>
@@ -148,33 +148,6 @@ export default function EditProfile() {
             </div>
             <p className="text-gray-600 text-sm leading-relaxed">{profileData.bio}</p>
           </div>
-
-          {/* Pagination */}
-          {/* <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <button className="flex items-center space-x-2 px-4 py-2 text-gray-600 bg-gray-200 rounded-lg hover:bg-gray-300 transition">
-              <ChevronLeft size={18} />
-              <span>Previous</span>
-            </button>
-
-            <div className="flex space-x-2">
-              {[1, 2, 3, 4].map((page) => (
-                <button
-                  key={page}
-                  onClick={() => setCurrentPage(page)}
-                  className={`w-8 h-8 rounded ${
-                    currentPage === page ? 'bg-emerald-500 text-white' : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
-                  }`}
-                >
-                  {page}
-                </button>
-              ))}
-            </div>
-
-            <button className="flex items-center space-x-2 px-4 py-2 text-white bg-emerald-500 rounded-lg hover:bg-emerald-600 transition">
-              <span>Next</span>
-              <ChevronRight size={18} />
-            </button>
-          </div> */}
         </div>
 
         {/* RIGHT SECTION */}
@@ -232,6 +205,33 @@ export default function EditProfile() {
             </div>
           </div>
         </div>
+
+        {/* Pagination */}
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-5">
+        <button className="flex items-center space-x-2 px-4 py-2 text-gray-600 bg-gray-200 rounded-lg hover:bg-gray-300 transition">
+          <ChevronLeft size={18} />
+          <span>Previous</span>
+        </button>
+
+        <div className="flex space-x-2">
+          {[1, 2, 3, 4].map((page) => (
+            <button
+              key={page}
+              onClick={() => setCurrentPage(page)}
+              className={`w-8 h-8 rounded ${
+                currentPage === page ? 'bg-emerald-500 text-white' : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
+              }`}
+            >
+              {page}
+            </button>
+          ))}
+        </div>
+
+        <button className="flex items-center space-x-2 px-4 py-2 text-white bg-emerald-500 rounded-lg hover:bg-emerald-600 transition">
+          <span>Next</span>
+          <ChevronRight size={18} />
+        </button>
+      </div>
       </div>
     </div>
   );
