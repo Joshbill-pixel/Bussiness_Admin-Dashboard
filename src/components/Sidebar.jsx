@@ -1,7 +1,7 @@
 import { Home, User, ShoppingBag, Menu as MenuIcon, Users, BarChart3, MessageSquare, Wallet, Trash2, X } from 'lucide-react';
 import { useState } from 'react';
 
-export default function Sidebar({ activeTab, onTabChange }) {
+export default function sidebar({ activeTab, onTabChange }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const menuItems = [
     { id: 'dashboard', icon: Home, label: 'Dashboard' },
