@@ -41,7 +41,7 @@ export default function sidebar({ activeTab, onTabChange }) {
         <div className="flex items-center justify-between">
           <div className="w-full flex items-center space-x-2">
             <div className="logo bg-emerald-400 rounded-lg flex items-center justify-center">
-              <img className="w-full" src="src/components/img/SABI RIDE BUSINESS LOGO 1.png" alt="Logo" />
+              <img className="w-full" src="./img/SABI RIDE BUSINESS LOGO 1.png" alt="Logo" />
             </div>
           </div>
           <button
