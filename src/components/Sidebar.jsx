@@ -1,5 +1,6 @@
 import { Home, User, ShoppingBag, Menu as MenuIcon, Users, BarChart3, MessageSquare, Wallet, Trash2, X } from 'lucide-react';
 import { useState } from 'react';
+import './Sidebar.css';
 
 export default function sidebar({ activeTab, onTabChange }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -19,8 +20,7 @@ export default function sidebar({ activeTab, onTabChange }) {
     <>
       <button
         onClick={() => setIsMobileMenuOpen(true)}
-        className="lg:hidden fixed top-4 left-4 z-40 p-2 bg-white rounded-lg shadow-md hover:bg-gray-50"
-      >
+        className="lg:hidden fixed top-4 left-4 z-40 p-2 bg-white rounded-lg shadow-md hover:bg-gray-50 font-italic" aria-hidden="true">
         <MenuIcon size={24} className="text-gray-700" />
       </button>
 
@@ -39,11 +39,10 @@ export default function sidebar({ activeTab, onTabChange }) {
       `}>
       <div className="p-6">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-xl">S</span>
-          </div>
-            <span className="text-xl font-bold text-gray-800">Ree</span>
+          <div className="w-full flex items-center space-x-2">
+            <div className="logo bg-emerald-400 rounded-lg flex items-center justify-center">
+              <img className="w-full" src="src/components/img/SABI RIDE BUSINESS LOGO 1.png" alt="Logo" />
+            </div>
           </div>
           <button
             onClick={() => setIsMobileMenuOpen(false)}
@@ -84,6 +83,7 @@ export default function sidebar({ activeTab, onTabChange }) {
         })}
       </nav>
 
+      <hr/>
       <div className="p-4">
         <button className="w-full flex items-center space-x-3 px-4 py-3 text-red-600 hover:bg-red-50 rounded-lg transition-colors">
           <Trash2 size={20} />
