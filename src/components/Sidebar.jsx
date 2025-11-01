@@ -85,6 +85,7 @@ export default function sidebar({ activeTab, onTabChange }) {
       </nav>
 
       <div className="p-4">
+        <hr className="w-full h-2 bg-black-50"/>
         <button className="w-full flex items-center space-x-3 px-4 py-3 text-red-600 hover:bg-red-50 rounded-lg transition-colors">
           <Trash2 size={20} />
           <span>Delete Account</span>
