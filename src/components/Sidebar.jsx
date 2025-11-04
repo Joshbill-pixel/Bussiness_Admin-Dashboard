@@ -1,6 +1,6 @@
 import { Home, User, ShoppingBag, Menu as MenuIcon, Users, BarChart3, MessageSquare, Wallet, Trash2, X } from 'lucide-react';
 import { useState } from 'react';
-import './Sidebar.css';
+// import './Sidebar.css';
 
 export default function sidebar({ activeTab, onTabChange }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -40,9 +40,11 @@ export default function sidebar({ activeTab, onTabChange }) {
       <div className="p-6">
         <div className="flex items-center justify-between">
           <div className="w-full flex items-center space-x-2">
-            <div className="logo bg-emerald-400 rounded-lg flex items-center justify-center">
-              <img className="w-full" src="./img/SABI RIDE BUSINESS LOGO 1.png" alt="Logo" />
+            <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-xl">A</span>
+              {/* <img className="w-full" src="./img/SABI RIDE BUSINESS LOGO 1.png" alt="Logo" /> */}
             </div>
+            <span className="text-xl font-bold text-gray-800">Ncaci</span>
           </div>
           <button
             onClick={() => setIsMobileMenuOpen(false)}
