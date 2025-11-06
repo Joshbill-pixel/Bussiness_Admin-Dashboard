@@ -9,7 +9,7 @@ export default function sidebar({ activeTab, onTabChange }) {
     { id: 'edit-profile', icon: User, label: 'Edit profile' },
     { id: 'orders', icon: ShoppingBag, label: 'Orders', badge: '25' },
     { id: 'menus', icon: MenuIcon, label: 'Menus' },
-    { id: 'customers', icon: Users, label: 'Customers' },
+    { id: 'customers', icon: Users, label: 'Customers', badge: '45' },
     { id: 'analytics', icon: BarChart3, label: 'Analytics' },
     { id: 'reviews', icon: MessageSquare, label: 'Reviews' },
     { id: 'chat', icon: MessageSquare, label: 'Chat' },
